@@ -1,0 +1,16 @@
+<div class="login-container">
+    <div class="login-form">
+        <h2>¡Bienvenido!</h2>
+        <p-floatLabel>
+            <input pInputText id="username" [(ngModel)]="username" name="username" required/>
+            <label for="username">Username</label>
+        </p-floatLabel>
+        <p-floatLabel>
+            <p-password [(ngModel)]="password" id="password" name="password" [feedback]="false" [toggleMask]="true" required />
+            <label for="password">Password</label>
+        </p-floatLabel>
+        <div class="options">           
+            <p-button label="INICIAR SESION" [rounded]="true" (onClick)="onSubmit()"/>
+        </div>
+    </div>
+</div>

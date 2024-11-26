@@ -1,0 +1,113 @@
+/* Estilos generales para el sidebar */
+.custom-sidebar {
+  width: 250px !important; /* Ancho del sidebar */
+  background-color: #2b2b2b; /* Fondo oscuro */
+  color: #000000; /* Texto blanco */
+  font-family: 'Roboto', sans-serif; /* Fuente moderna */
+  border-right: 1px solid #e6e4e4; /* Borde */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo del encabezado */
+.sidebar-header {
+  background-color: #333; /* Fondo oscuro para el encabezado */
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #444;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-header i {
+  font-size: 2rem;
+  color: #ffcc00; /* Icono de color amarillo */
+}
+
+/* Menú */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin: 0.5rem 0;
+}
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover de links principales */
+.sidebar-menu a:hover {
+  background-color: #444;
+  color: #ffcc00; /* Color de acento */
+}
+
+.sidebar-menu i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Subaccesos */
+.sidebar-menu ul {
+  list-style: none;
+  padding-left: 1.5rem; /* Sangría de subaccesos */
+}
+
+.sidebar-menu ul li a {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Footer del sidebar (al final) */
+.sidebar-footer {
+  margin-top: auto; /* Alinea los botones al final */
+  padding: 1rem;
+  border-top: 1px solid #444;
+}
+
+.sidebar-footer a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-footer a:hover {
+  background-color: #444;
+  color: #ffcc00;
+}
+
+.sidebar-footer i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Estilo de los botones de abrir/cerrar el sidebar */
+.menu-button {
+  color: #ffcc00; /* Color amarillo para el ícono del menú */
+}

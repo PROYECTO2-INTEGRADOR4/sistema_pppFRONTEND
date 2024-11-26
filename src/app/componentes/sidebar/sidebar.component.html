@@ -1,0 +1,38 @@
+<div class="card">
+  <p-toolbar>
+      <div class="p-toolbar-group-start">
+          <p-button (click)="visible = !visible" icon="pi pi-bars" class="menu-button"></p-button>
+      </div>
+  </p-toolbar>
+</div>
+
+<div class="card flex justify-content-center">
+  <p-sidebar [(visible)]="visible" position="left" [baseZIndex]="1000" styleClass="custom-sidebar">
+      <div class="sidebar-header">
+          <h2>Upeu</h2> <!-- Título de la universidad -->
+      </div>        
+      <ul class="sidebar-menu">
+          <!-- Renderiza accesos -->
+          <li *ngFor="let acceso of accesos">
+              <a [routerLink]="acceso.url">
+                  <i class="pi pi-fw" [class]="acceso.icono"></i> {{ acceso.titulo }}
+              </a>
+              <ul *ngIf="acceso.subaccesos.length > 0">
+                  <li *ngFor="let subacceso of acceso.subaccesos">
+                      <a [routerLink]="subacceso.url">
+                          <i class="pi pi-fw" [class]="subacceso.icono"></i> {{ subacceso.titulo }}
+                      </a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+      <div class="sidebar-footer">
+          <a [routerLink]="['/configuracion']">
+              <i class="pi pi-cog"></i> Configuración
+          </a>
+          <a [routerLink]="['/cerrar-sesion']">
+              <i class="pi pi-sign-out"></i> Cerrar sesión
+          </a>
+      </div>
+  </p-sidebar>
+</div>

@@ -1,0 +1,49 @@
+/* Estilos generales para el perfil */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-header i {
+    font-size: 3rem;
+    margin-right: 1rem;
+    color: #ffcc00; /* Icono de usuario amarillo */
+  }
+  
+  .profile-header h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .info-value {
+    color: #555;
+  }
