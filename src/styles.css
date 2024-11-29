@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0px;
+}
+
+.p-toolbar {
+    background: #293036;
+    height: 64px;
+    border-radius: 0px;
+    border: 1px solid #293036;
+    padding: 8px;
+    
+
+}
+
+p-button {
+    color: #ffffff;
+    background: #ffffff00;
+    border: 1px solid #ffffff00;
+}
+
+.p-button:not(:disabled):hover {
+    background: #293036;
+    color: #ffffff;
+    border-color: #293036;
+}
+
+.px-4 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-bottom: 1rem;
+    background: rgb(25 29 32);
+}

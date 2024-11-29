@@ -1,0 +1,32 @@
+<app-sidebar></app-sidebar>
+<div class="card">
+    <p-table 
+    [value]="personas" 
+    [paginator]="true" 
+    [rows]="10" 
+    [tableStyle]="{ 'width': '100%' }"
+    [scrollable]="true"
+        scrollHeight="600px"
+        [rowsPerPageOptions]="[5, 10, 20]" >
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:18%">APELLIDOS</th>
+                <th style="width:25%">NOMBRES</th>
+                <th style="width:25%">CARRERA</th>
+                <th style="width:20%">DNI</th>
+                <th style="width:25%">TELEFONO</th>
+                <th style="width:25%">CORREO</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-persona>
+            <tr>
+                <td>{{ persona.apellidos }}</td>
+                <td>{{ persona.nombres }}</td>
+                <td>{{ persona.carrera }}</td>
+                <td>{{ persona.dni }}</td>
+                <td>{{ persona.telefono }}</td>
+                <td>{{ persona.email }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

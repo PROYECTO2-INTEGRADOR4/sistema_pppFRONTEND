@@ -1,37 +1,29 @@
 <app-sidebar></app-sidebar>
 <div class="profile-section">
-    <div class="profile-header">
+    <div class="profile-header ">
         <i class="pi pi-user"></i>
-        <h3>Perfil Estudiante</h3>
+        <h3>Perfil</h3>
     </div>
-    <div class="profile-info">
+    <div class="profile-info ">
         <div class="info-row">
             <span class="info-label">Apellidos y Nombres:</span>
-            <span class="info-value">Mary Soto Luque</span>
-        </div>
-        <div class="info-row">
-            <span class="info-label">Código de Estudiante:</span>
-            <span class="info-value">202310624</span>
+            <span class="info-value">{{ perfilData.apellidos }} {{ perfilData.nombres }}</span>
         </div>
         <div class="info-row">
             <span class="info-label">DNI:</span>
-            <span class="info-value">94533457</span>
+            <span class="info-value">{{ perfilData.dni }}</span>
         </div>
         <div class="info-row">
-            <span class="info-label">Correo Institucional:</span>
-            <span class="info-value">maryedu.pe</span>
+            <span class="info-label">Correo:</span>
+            <span class="info-value">{{ perfilData.email }}</span>
         </div>
         <div class="info-row">
             <span class="info-label">Carrera:</span>
-            <span class="info-value">EP. Ingeniería de Sistemas</span>
+            <span class="info-value">{{ perfilData.carrera }}</span>
         </div>
         <div class="info-row">
             <span class="info-label">Telefono:</span>
-            <span class="info-value">789456123</span>
-        </div>
-        <div class="info-row">
-            <span class="info-label">Plan:</span>
-            <span class="info-value">2023-1</span>
+            <span class="info-value">{{ perfilData.telefono }}</span>
         </div>
     </div>
 </div>

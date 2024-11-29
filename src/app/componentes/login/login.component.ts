@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [FormsModule, PasswordModule, InputTextModule, FloatLabelModule, ButtonModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
   username: string = '';
@@ -25,17 +25,23 @@ export class LoginComponent {
         this.authService.login(this.username, this.password).subscribe({
           next: (response) => {
             console.log('Login successful', response);
-            localStorage.setItem('token', response.accessToken); 
-            localStorage.setItem('roles', JSON.stringify(response.roles));
-            localStorage.setItem('carrera', response.carrera);
+
+            const accessToken = response.accessToken;
+            const roles = response.roles;
+            const carrera = response.carrera;
+            const username = response.username;
+
+            this.authService.saveSessionData(accessToken, roles, carrera, username);
+
             this.router.navigate(['/perfil']);
           },
           error: (error) => {
-            console.error('Login failed', error);
+            console.error('No se pudo iniciar sesion', error);
           },
         });
       } else {
         console.error('Por favor, ingresa usuario y contraseña');
       }
   }
+
 }
