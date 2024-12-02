@@ -42,7 +42,7 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     const accessToken = this.getToken();
-    return accessToken !== null;
+    return accessToken !== null && accessToken !== '';
   }
 
   logout(): void {

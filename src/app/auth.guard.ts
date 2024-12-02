@@ -11,16 +11,15 @@ export class AuthGuard implements CanActivate {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): boolean {
+  canActivate(): boolean {
     
-    if (!this.authService.isLoggedIn()) {
-      this.router.navigate(['/login']);
-      return false;  
+    const accessToken = localStorage.getItem('accessToken'); // Verifica si hay un token guardado
+    if (accessToken) {
+      return true; // Permite el acceso
+    } else {
+      this.router.navigate(['/login']); // Redirige al login si no está autenticado
+      return false; // Bloquea el acceso
     }
-    return true; 
   }
 
 }

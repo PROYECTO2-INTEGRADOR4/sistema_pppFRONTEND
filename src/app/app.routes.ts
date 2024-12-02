@@ -7,15 +7,18 @@ import { GestorPComponent } from './componentes/gestor-p/gestor-p.component';
 import { AuthGuard } from './auth.guard';
 import { NgModule } from '@angular/core';
 import { GraficoComponent } from './componentes/grafico/grafico.component';
+import { Auth2Guard } from './auth2.guard';
+import { HomeComponent } from './componentes/home/home.component';
 
 export const routes: Routes = [
     {
         path : 'login',
         component : LoginComponent,
+        canActivate: [Auth2Guard]
     },
     {
         path : 'home',
-        component: SidebarComponent,
+        component: HomeComponent,
         title : 'Home',
         canActivate: [AuthGuard]
     },

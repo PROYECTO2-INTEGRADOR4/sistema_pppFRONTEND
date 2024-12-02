@@ -33,7 +33,7 @@ export class LoginComponent {
 
             this.authService.saveSessionData(accessToken, roles, carrera, username);
 
-            this.router.navigate(['/perfil']);
+            this.router.navigate(['/home']);
           },
           error: (error) => {
             console.error('No se pudo iniciar sesion', error);

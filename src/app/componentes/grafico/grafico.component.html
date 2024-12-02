@@ -1,5 +1,7 @@
 <app-sidebar></app-sidebar>
-<h1>Usuario por Carreras</h1>
+
 <div *ngIf="chartData && chartData.labels.length > 0" class="chart-container">
+  <h3>Usuarios por Carreras</h3>
+  <h5>Cantidad de usuarios por carrera - Grafico de barras</h5>
     <p-chart type="bar" [data]="chartData" [options]="chartOptions"></p-chart>
   </div>
