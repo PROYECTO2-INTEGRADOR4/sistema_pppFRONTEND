@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { GraficoComponent } from './componentes/grafico/grafico.component';
 import { Auth2Guard } from './auth2.guard';
 import { HomeComponent } from './componentes/home/home.component';
+import { GestionInicioComponent } from './componentes/gestion-inicio/gestion-inicio.component';
 
 export const routes: Routes = [
     {
@@ -49,6 +50,12 @@ export const routes: Routes = [
         path: 'g_carrera',
         component: GraficoComponent,
         title: 'usuario por carrera',
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'gestion_practicas',
+        component: GestionInicioComponent,
+        title: 'gestion_inicio',
         canActivate: [AuthGuard]
     }
 ];
