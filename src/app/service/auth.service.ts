@@ -46,6 +46,6 @@ export class AuthService {
   }
 
   logout(): void {
-    localStorage.clear();  // Elimina todos los datos guardados en localStorage
+    localStorage.clear(); 
   }
 }

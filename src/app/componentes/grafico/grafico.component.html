@@ -1,0 +1,5 @@
+<app-sidebar></app-sidebar>
+<h1>Usuario por Carreras</h1>
+<div *ngIf="chartData && chartData.labels.length > 0" class="chart-container">
+    <p-chart type="bar" [data]="chartData" [options]="chartOptions"></p-chart>
+  </div>

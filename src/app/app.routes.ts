@@ -6,6 +6,7 @@ import { SolicitudInicioComponent } from './componentes/solicitud-inicio/solicit
 import { GestorPComponent } from './componentes/gestor-p/gestor-p.component';
 import { AuthGuard } from './auth.guard';
 import { NgModule } from '@angular/core';
+import { GraficoComponent } from './componentes/grafico/grafico.component';
 
 export const routes: Routes = [
     {
@@ -39,6 +40,12 @@ export const routes: Routes = [
         path : 'personas_r',
         component : GestorPComponent,
         title : 'gestorp' ,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'g_carrera',
+        component: GraficoComponent,
+        title: 'usuario por carrera',
         canActivate: [AuthGuard]
     }
 ];
