@@ -1,0 +1,48 @@
+.profile-section {
+    width: 50%;            /* Limita el ancho al 75% */
+    margin: 0 auto;        /* Centra horizontalmente */
+    padding: 20px;   
+    }
+    
+    .profile-header {
+      display: flex;
+      flex-direction: column;
+      
+      margin-bottom: 1.5rem;
+    }
+    
+    .profile-header i {
+      font-size: 3rem;
+      margin-right: 1rem;
+      color: #008080; /* Icono de usuario amarillo */
+    }
+    
+    .profile-header h3 {
+      font-size: 1.8rem;
+      margin: 0;
+      color: #353535;
+    }
+    
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      background-color: #f5f5f5;  /* Fondo suave */
+      padding: 15px;
+      border-radius: 8px;
+    }
+    
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .info-label {
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .info-value {
+      color: #555;
+    }

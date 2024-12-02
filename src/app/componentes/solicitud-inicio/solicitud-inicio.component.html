@@ -1,1 +1,60 @@
 <app-sidebar></app-sidebar>
+<div class="profile-section">
+    <div class="profile-header ">
+        <h4>Registro de Solicitud para el Inicio de Practicas Pre-Profesionales</h4>
+        <h5>Formulario de registro de solicitud para el inicio de Practicas Pre-Profesionales</h5>
+    </div>
+    <div class="profile-info ">
+        <div class="info-row">
+            <span class="info-label">Apellidos y Nombres:</span>
+            <span class="info-value">{{ estudianteData.apellidos }} {{ estudianteData.nombres }}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">DNI:</span>
+            <span class="info-value">{{ estudianteData.dni }}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Correo:</span>
+            <span class="info-value">{{ estudianteData.email }}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Carrera:</span>
+            <span class="info-value">{{ estudianteData.carrera }}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Telefono:</span>
+            <span class="info-value">{{ estudianteData.telefono }}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Correo Institucional:</span>
+            <span class="info-value">{{ estudianteData.correo_institucional }}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Codigo de Estudiante:</span>
+            <span class="info-value">{{ estudianteData.codigo }}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Plan:</span>
+            <span class="info-value">{{ estudianteData.plan }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="card flex justify-content-center">
+    <p-toast />
+    <p-fileUpload 
+        name="demo[]" 
+        url="https://www.primefaces.org/cdn/api/upload.php" 
+        (onUpload)="onUpload($event)" 
+        [multiple]="true" 
+        accept="image/*" 
+        maxFileSize="1000000">
+            <ng-template pTemplate="content">
+                <ul *ngIf="uploadedFiles.length">
+                    <li *ngFor="let file of uploadedFiles">
+                        {{ file.name }} - {{ file.size }} bytes
+                    </li>
+                </ul>
+            </ng-template>
+    </p-fileUpload>
+</div>
